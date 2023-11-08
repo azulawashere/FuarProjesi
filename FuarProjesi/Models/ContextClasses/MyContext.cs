@@ -27,7 +27,7 @@ namespace FuarProjesi.Models.ContextClasses
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppUserProfile> Profiles { get; set; }              
         public DbSet<Category> Categories { get; set; }
-        public DbSet<PackageHostessConfiguration> PackageHostesses { get; set; }
+        public DbSet<PackageHostess> PackageHostesses { get; set; }
         public DbSet<Flat> Flats { get; set; }
         public DbSet<Package> Packages { get; set; }
         public DbSet<Place> Places { get; set; }
