@@ -7,5 +7,6 @@
 
         //Relational Properties
         public virtual AppUserProfile Profile { get; set; }
+        public virtual ICollection<Package> Packages { get; set; }
     }
 }
