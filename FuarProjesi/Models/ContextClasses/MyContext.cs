@@ -33,6 +33,6 @@ namespace FuarProjesi.Models.ContextClasses
         public DbSet<Place> Places { get; set; }
         public DbSet<Hostess> Hostesses { get; set; }
         public DbSet<FoodService> FoodServices { get; set; }
-        // Deneme silincek burası
+        
     }
 }
