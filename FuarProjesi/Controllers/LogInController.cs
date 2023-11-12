@@ -40,7 +40,7 @@ namespace FuarProjesi.Controllers
                         }
                         else
                         {
-                            ViewBag.Message = "Username or Password isn't correct";
+                            ViewData["err"] = "Username or Password isn't correct";
                             LogInUserSharedPageVM logInUSPVM = new LogInUserSharedPageVM()
                             {
                                 LogIn = logIn
