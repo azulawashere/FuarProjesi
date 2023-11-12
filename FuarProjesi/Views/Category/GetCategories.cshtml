@@ -1,0 +1,51 @@
+﻿@model CategoryResponsePageVM
+
+<table class="table tabletable-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Category Name</th>
+
+            <th colspan="2" style="padding-left:200px">Functions</th>
+
+
+        </tr>
+
+
+
+
+
+
+    </thead>
+
+
+    <tbody>
+
+
+        @foreach(CategoryResponseModel item in Model.Categories)
+        {
+            
+            <tr>
+
+                <td>@item.ID</td>
+                <td>@item.CategoryName</td>
+                <td>  <a asp-controller="Category" asp-action="UpdateCategory" asp-route-id="@item.ID" class="btn btn-warning">Update</a> </td>
+                <td> <a asp-controller="Category" asp-action="DeleteCategory" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>  </td>
+
+
+
+            </tr>
+
+
+
+        }
+
+
+
+    </tbody>
+
+
+
+
+
+</table>
