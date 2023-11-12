@@ -1,6 +1,9 @@
 ﻿@model LogInUserSharedPageVM
 
 <div>
+    <div>
+        @ViewBag.Message
+    </div>
     <form asp-controller="LogIn" asp-action="Index" method="post" class="form">
         <div class="mb-3">
             

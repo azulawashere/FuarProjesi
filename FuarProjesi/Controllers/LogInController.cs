@@ -1,5 +1,6 @@
 ﻿using FuarProjesi.Models.ContextClasses;
 using FuarProjesi.Models.Entities;
+using FuarProjesi.Models.LogIn.PageVMs;
 using FuarProjesi.Models.LogIn.RequestModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,9 +34,18 @@ namespace FuarProjesi.Controllers
                         {
                             return RedirectToAction("Index", "Admin");
                         }
-                        else 
+                        else if (appU.Admin == false)
                         {
-                            return View();
+                            return RedirectToAction("Index", "User");
+                        }
+                        else
+                        {
+                            ViewBag.Message = "Username or Password isn't correct";
+                            LogInUserSharedPageVM logInUSPVM = new LogInUserSharedPageVM()
+                            {
+                                LogIn = logIn
+                            };
+                            return View(logInUSPVM);
                         }
                     }
                 }
