@@ -7,10 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Admin\**" />
-    <Content Remove="Views\Admin\**" />
-    <EmbeddedResource Remove="Views\Admin\**" />
-    <None Remove="Views\Admin\**" />
+    <Compile Remove="Models\MapperClasses\**" />
+    <Content Remove="Models\MapperClasses\**" />
+    <EmbeddedResource Remove="Models\MapperClasses\**" />
+    <None Remove="Models\MapperClasses\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\MapperClasses\" />
     <Folder Include="Models\Register\ResponseModels\" />
   </ItemGroup>
 
