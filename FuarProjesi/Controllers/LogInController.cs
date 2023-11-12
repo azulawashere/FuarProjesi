@@ -38,16 +38,14 @@ namespace FuarProjesi.Controllers
                         {
                             return RedirectToAction("Index", "User");
                         }
-                        else
-                        {
-                            ViewData["err"] = "Username or Password isn't correct";
-                            LogInUserSharedPageVM logInUSPVM = new LogInUserSharedPageVM()
-                            {
-                                LogIn = logIn
-                            };
-                            return View(logInUSPVM);
-                        }
+                        
                     }
+                    ViewData["ErrorMessage"] = "Kullanıcı adı veya şifre yanlış.";
+                    LogInUserSharedPageVM logInUSPVM = new LogInUserSharedPageVM()
+                    {
+                        LogIn = logIn
+                    };
+                    return View(logInUSPVM);
                 }
             }
             catch

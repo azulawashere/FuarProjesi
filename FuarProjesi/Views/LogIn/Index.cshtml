@@ -1,12 +1,13 @@
 ﻿@model LogInUserSharedPageVM
-<div>
-    <h1>@ViewData["err"]</h1>
 
-</div>
 <div>
-   
     <form asp-controller="LogIn" asp-action="Index" method="post" class="form">
-
+        @if (ViewData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewData["ErrorMessage"]
+            </div>
+        }
         <div class="mb-3">
             
             <label><span asp-validation-for="@Model.LogIn.UserName"></span></label>
