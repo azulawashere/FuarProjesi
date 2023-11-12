@@ -14,9 +14,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Register\Controllers\" />
+    <Folder Include="Areas\Register\Data\" />
+    <Folder Include="Areas\Register\Models\" />
+    <Folder Include="Areas\Register\Views\" />
     <Folder Include="Controllers\" />
     <Folder Include="Areas\" />
   </ItemGroup>
