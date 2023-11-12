@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\MapperClasses\" />
     <Folder Include="Models\Register\ResponseModels\" />
   </ItemGroup>
 
