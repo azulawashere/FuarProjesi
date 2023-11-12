@@ -11,6 +11,14 @@
     <Content Remove="Models\MapperClasses\**" />
     <EmbeddedResource Remove="Models\MapperClasses\**" />
     <None Remove="Models\MapperClasses\**" />
+    <Compile Remove="Models\MapperClasses\**" />
+    <Compile Remove="Views\Admin\**" />
+    <Content Remove="Models\MapperClasses\**" />
+    <Content Remove="Views\Admin\**" />
+    <EmbeddedResource Remove="Models\MapperClasses\**" />
+    <EmbeddedResource Remove="Views\Admin\**" />
+    <None Remove="Models\MapperClasses\**" />
+    <None Remove="Views\Admin\**" />
   </ItemGroup>
 
   <ItemGroup>
