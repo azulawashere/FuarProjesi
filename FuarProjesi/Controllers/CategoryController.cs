@@ -68,6 +68,21 @@ namespace FuarProjesi.Controllers
 
             return View(cpVm);
         }
-
+        [HttpPost]
+        public IActionResult UpdateCategory(CategoryVM category)
+        {
+            Category original = _db.Categories.Find(category.ID);
+            original.CategoryName = category.CategoryName;
+            
+            _db.SaveChanges();
+            TempData["message"] = "update successful";
+            return RedirectToAction("GetCategories");
+        }
+        public IActionResult DeleteCategory(int id)
+        {
+            _db.Categories.Remove(_db.Categories.Find(id));
+            _db.SaveChanges();
+            return RedirectToAction("GetCategories");
+        }
     }
 }
