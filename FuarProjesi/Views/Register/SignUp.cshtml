@@ -28,12 +28,14 @@
 
     </div>
     <div>
-        <label><span asp-validation-for="@Model.Register.UserName"></span></label>
-        <label class="form-label"> UserName </label>
-        <input asp-for="Register.UserName" class="form-control" />
+        <label><span asp-validation-for="@Model.Register.BirthDate"></span></label>
+        <label class="form-label"> BirthDate(1111-11-11) </label>
+        <input type="datetime" asp-for="Register.BirthDate" class="form-control" />
 
     </div>
 
-
+    <button class="btn btn-danger">
+       Sign-UP
+    </button>
 
 </form>
