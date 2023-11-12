@@ -18,12 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Register\Controllers\" />
-    <Folder Include="Areas\Register\Data\" />
-    <Folder Include="Areas\Register\Models\" />
-    <Folder Include="Areas\Register\Views\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Areas\" />
   </ItemGroup>
 
 </Project>
