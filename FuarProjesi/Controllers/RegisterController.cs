@@ -25,7 +25,7 @@ namespace FuarProjesi.Controllers
         {
             try
             {
-                if (register.UserName!=string.Empty&&register.Password!=string.Empty)
+                if (register.UserName!=string.Empty&&register.Password!=string.Empty&& ModelState.IsValid)
                 {
                     AppUserProfile profile = new()
                     {
@@ -42,7 +42,7 @@ namespace FuarProjesi.Controllers
                     };
                     _db.Add(user);
                     _db.SaveChanges();
-                    return RedirectToAction("Index","Login");
+                    return RedirectToAction("Index","Login",user);
 
                 }
 
