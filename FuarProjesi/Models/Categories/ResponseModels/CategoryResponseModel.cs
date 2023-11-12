@@ -1,4 +1,4 @@
-﻿namespace FuarProjesi.Models.Admin.ResponseModels.CategoryResponseModels
+﻿namespace FuarProjesi.Models.Categories.ResponseModels
 {
     public class CategoryResponseModel
     {

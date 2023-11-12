@@ -1,7 +1,7 @@
-﻿using FuarProjesi.Models.Admin.PageVms.CategoryPageVms;
-using FuarProjesi.Models.Admin.PureVms.CategoryPureVms;
-using FuarProjesi.Models.Admin.RequestModels.CategoryRequestModels;
-using FuarProjesi.Models.Admin.ResponseModels.CategoryResponseModels;
+﻿using FuarProjesi.Models.Categories.PageVms;
+using FuarProjesi.Models.Categories.PureVms;
+using FuarProjesi.Models.Categories.RequestModels;
+using FuarProjesi.Models.Categories.ResponseModels;
 using FuarProjesi.Models.ContextClasses;
 using FuarProjesi.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FuarProjesi.Controllers
 {
-    
+
     public class AdminController : Controller
     {
         MyContext _db;

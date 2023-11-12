@@ -1,4 +1,4 @@
-﻿namespace FuarProjesi.Models.Admin.PureVms.CategoryPureVms
+﻿namespace FuarProjesi.Models.Categories.PureVms
 {
     public class CategoryVM
     {

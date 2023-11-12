@@ -1,6 +1,6 @@
-﻿using FuarProjesi.Models.Admin.ResponseModels.CategoryResponseModels;
+﻿using FuarProjesi.Models.Categories.ResponseModels;
 
-namespace FuarProjesi.Models.Admin.PageVms.CategoryPageVms
+namespace FuarProjesi.Models.Categories.PageVms
 {
     public class CategoryResponsePageVM
     {

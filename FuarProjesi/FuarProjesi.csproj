@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="Models\Register\ResponseModels\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
 
 </Project>
