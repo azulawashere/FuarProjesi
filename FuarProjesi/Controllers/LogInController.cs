@@ -31,7 +31,7 @@ namespace FuarProjesi.Controllers
                     {
                         if (appU.Admin)
                         {
-                            return RedirectToAction();
+                            return RedirectToAction("Index", "Admin");
                         }
                         else 
                         {
