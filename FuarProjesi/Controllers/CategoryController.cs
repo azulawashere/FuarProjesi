@@ -38,7 +38,7 @@ namespace FuarProjesi.Controllers
             };
             _db.Categories.Add(c);
             _db.SaveChanges();
-            return View();
+            return RedirectToAction("GetCategories");
         }
         public IActionResult GetCategories() 
         {

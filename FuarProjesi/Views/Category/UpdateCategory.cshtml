@@ -1,0 +1,22 @@
+﻿@model CategorySharedPageVM
+
+<form asp-controller="Category" asp-action="UpdateCategory" method="post" class="form">
+
+
+    <input type="hidden" asp-for="@Model.Category.ID" />
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Category Name</label>
+        <input asp-for="Category.CategoryName" class="form-control">
+    </div>
+   
+
+    <button class="btn btn-primary">
+        Update
+    </button>
+
+
+
+
+
+</form>
