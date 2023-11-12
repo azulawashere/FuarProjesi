@@ -1,22 +1,39 @@
-﻿@model 
-<form>
+﻿@model RegisterUserSharedPageVM
+<form asp-controller="Register" asp-action="SignUp" method="post" class="form">
 
-<div> 
+<div >
+        <label><span asp-validation-for="@Model.Register.UserName"></span></label>
+        <label class="form-label"> UserName </label>
+        <input asp-for="Register.UserName" class="form-control"/>
 
 </div>
 
     <div>
-    </div>
+        <label><span asp-validation-for="@Model.Register.Password"></span></label>
+        <label class="form-label"> PassWord </label>
+        <input asp-for="Register.Password" class="form-control" />
 
+    </div>
+    <div>
+        <label><span asp-validation-for="@Model.Register.FirstName"></span></label>
+        <label class="form-label"> FirstName </label>
+        <input asp-for="Register.FirstName" class="form-control" />
+
+    </div>
 
     <div>
+        <label><span asp-validation-for="@Model.Register.LastName"></span></label>
+        <label class="form-label"> LastName </label>
+        <input asp-for="Register.LastName" class="form-control" />
+
+    </div>
+    <div>
+        <label><span asp-validation-for="@Model.Register.UserName"></span></label>
+        <label class="form-label"> UserName </label>
+        <input asp-for="Register.UserName" class="form-control" />
+
     </div>
 
-    <div>
-    </div>
-
-    <div>
-    </div>
 
 
 </form>
