@@ -23,22 +23,7 @@ namespace FuarProjesi.Controllers
             return View();
         }
 
-        public IActionResult CreateCategory()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult CreateCategory(CreateCategoryRequestModel category)
-        {
-            Category c = new()
-            {
-                CategoryName = category.CategoryName
-            };
-            _db.Categories.Add(c);
-            _db.SaveChanges();
-            return View();
-        }
+       
    
 
 
