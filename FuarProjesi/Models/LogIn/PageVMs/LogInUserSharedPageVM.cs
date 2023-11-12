@@ -4,6 +4,6 @@ namespace FuarProjesi.Models.LogIn.PageVMs
 {
     public class LogInUserSharedPageVM
     {
-        public LogInRequestModel LogInRequestModel { get; set; }
+        public LogInRequestModel LogIn { get; set; }
     }
 }

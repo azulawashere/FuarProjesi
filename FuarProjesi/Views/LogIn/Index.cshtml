@@ -1,1 +1,18 @@
-﻿
+﻿@model LogInUserSharedPageVM
+
+<div>
+    <form asp-controller="LogIn" asp-action="Index" method="post" class="form">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">UserName</label>
+            <input asp-for="@Model.LogIn.UserName" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input class="form-control" asp-for="@Model.LogIn.Password" rows="3"></input>
+        </div>
+
+        <button class="btn btn-primary">
+            Log In
+        </button>
+    </form>
+</div>
