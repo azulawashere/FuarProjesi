@@ -4,8 +4,10 @@ namespace FuarProjesi.Controllers
 {
     public class RegisterController : Controller
     {
-        public IActionResult Index()
+        public IActionResult SignUp()
         {
+
+
             return View();
         }
     }
