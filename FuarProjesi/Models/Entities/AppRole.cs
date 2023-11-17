@@ -1,19 +1,22 @@
 ﻿using FuarProjesi.Models.Enums;
 using FuarProjesi.Models.Interfaces;
+using Microsoft.AspNetCore.Identity;
 
 namespace FuarProjesi.Models.Entities
 {
-    public abstract class BaseEntity:IEntity
+    public class AppRole : IdentityRole<int>, IEntity
     {
-        public BaseEntity()
+        public AppRole()
         {
-            CreatedDate = DateTime.Now;
+            CreatedDate = DateTime.UtcNow;
             Status = DataStatus.Inserted;
         }
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public DataStatus Status { get; set; }
-        public DateTime? ModifiedDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //Relational Properties
+        public virtual ICollection<AppUserRole> UserRoles { get; set; }
     }
 }

@@ -18,41 +18,10 @@ namespace FuarProjesi.Controllers
             return View();
         }
 
-       
+
         [HttpPost]
         public IActionResult Index(LogInRequestModel logIn)
-        {
-            try
-            {
-                if (logIn.UserName != null && logIn.Password != null)
-                {
-                    
-                    AppUser appU = _db.AppUsers.Where(x => x.UserName == logIn.UserName && x.Password == logIn.Password).FirstOrDefault();
-                    if (appU != null)
-                    {
-                        if (appU.Admin)
-                        {
-                            return RedirectToAction("Index", "Admin");
-                        }
-                        else if (appU.Admin == false)
-                        {
-                            return RedirectToAction("Index", "User");
-                        }
-                        
-                    }
-                    ViewData["ErrorMessage"] = "Kullanıcı adı veya şifre yanlış.";
-                    LogInUserSharedPageVM logInUSPVM = new LogInUserSharedPageVM()
-                    {
-                        LogIn = logIn
-                    };
-                    return View(logInUSPVM);
-                }
-            }
-            catch
-            {
-                
-            }
-            return View();
+        {return View(logIn);
         }
 
     }

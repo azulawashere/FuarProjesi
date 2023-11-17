@@ -10,6 +10,7 @@ namespace FuarProjesi.Models.Configurations
         {
             base.Configure(builder);
             builder.Property(x => x.UnitPrice).HasColumnType("money");
+         
         }
 
     }

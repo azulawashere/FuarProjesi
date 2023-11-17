@@ -23,41 +23,7 @@ namespace FuarProjesi.Controllers
         [HttpPost]
         public IActionResult SignUp(RegisterRequestModel register)
         {
-            try
-            {
-                if (register.UserName!=string.Empty&&register.Password!=string.Empty&& ModelState.IsValid)
-                {
-                    AppUserProfile profile = new()
-                    {
-                     BirthDate=register.BirthDate,
-                     FirstName=register.FirstName,
-                     LastName=register.LastName,
-                    };
-                    AppUser user = new()
-                    {
-                        UserName = register.UserName,
-                        Password = register.Password,
-                        Profile=profile,
-                        Admin=false
-                    };
-                    _db.Add(user);
-                    _db.SaveChanges();
-                    return RedirectToAction("Index","Login",user);
-
-                }
-
-            }
-            catch 
-            {
-
-                RegisterUserSharedPageVM vm = new()
-                {
-                    Register = register
-                };
-                return View(vm);
-            }
-
-            return View();
+         return RedirectToAction("Index");
         }
     }
 }
