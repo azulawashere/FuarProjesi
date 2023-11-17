@@ -19,6 +19,18 @@ builder.Services.AddIdentity<AppUser, AppRole>(x =>
 
 }).AddEntityFrameworkStores<MyContext>();
 
+
+builder.Services.ConfigureApplicationCookie(x =>
+{
+    x.Cookie.HttpOnly = true;
+    x.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    x.Cookie.Name = "Fosiru";
+    x.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+    x.Cookie.SameSite = SameSiteMode.Strict;
+    x.LoginPath = new PathString("/Home/SignIn");
+    x.AccessDeniedPath = new PathString("/Home/AccessDenied");
+});
+
 builder.Services.AddDbContextPool<MyContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection")).UseLazyLoadingProxies());
 
 WebApplication app = builder.Build();
@@ -36,6 +48,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=SignIn}/{id?}");
 
 app.Run();

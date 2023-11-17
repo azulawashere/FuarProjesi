@@ -1,5 +1,6 @@
 ﻿using FuarProjesi.Models.Configurations;
 using FuarProjesi.Models.Entities;
+using FuarProjesi.Models.Extentions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,7 @@ namespace FuarProjesi.Models.ContextClasses
             modelBuilder.ApplyConfiguration(new PackageConfiguration());
             modelBuilder.ApplyConfiguration(new PlaceConfiguration());
             modelBuilder.ApplyConfiguration(new PackageHostessConfiguration());
+            
         }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppUserProfile> Profiles { get; set; }              

@@ -1,0 +1,37 @@
+﻿@model UserRegisterRequestModel
+
+<form asp-controller="Home" asp-action="Register" method="post">
+    <div>
+        <label> Kullanıcı Adı Girin</label>
+       <span class="text-danger" asp-validation-for="UserName"> </span>
+     <input  asp-for="UserName" />
+    </div>
+
+      <div>
+        <label> Şifre Girin</label>
+       <span class="text-danger" asp-validation-for="Password"> </span>
+     <input  asp-for="Password" />
+    </div>
+
+    <div>
+        <label> Şifre Tekrar</label>
+        <span class="text-danger" asp-validation-for="ConfirmPassword"> </span>
+        <input asp-for="ConfirmPassword" />
+    </div>
+    <div>
+        <label> Email Adresi Girin</label>
+        <span class="text-danger" asp-validation-for="Email"> </span>
+        <input type="text" asp-for="Email" />
+    </div>
+<button>
+    Kayıt ol
+</button>
+<div class="text-danger" asp-validation-summary="ModelOnly">
+
+</div>
+
+
+
+
+
+</form>

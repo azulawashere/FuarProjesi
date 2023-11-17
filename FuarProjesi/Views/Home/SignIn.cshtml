@@ -1,0 +1,26 @@
+﻿@model UserSingInRequestModel
+
+<form asp-controller="Home" asp-action="SignIn" method="post">
+    <input  type="hidden" asp-for="ReturnUrl"/>
+    <div>
+        <label> Kullanıcı adı giriniz</label>
+        <span class="text-danger" asp-validation-for="UserName"></span>
+        <input asp-for="UserName" />
+        
+    </div>
+    <div>
+        <label> Şifre giriniz</label>
+        <span class="text-danger" asp-validation-for="Password"></span>
+        <input asp-for="@Model.Password" />
+
+    </div>
+    <div >
+        <input type="checkbox" asp-for="RememberMe"/>
+        <label>Beni Hatırla</label>
+    </div>
+
+    <button>
+        Giriş Yap
+    </button>
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+</form>

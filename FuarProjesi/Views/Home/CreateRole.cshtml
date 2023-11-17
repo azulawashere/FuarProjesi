@@ -1,0 +1,12 @@
+﻿@model CreateRoleRequestModel
+
+<form asp-controller="Home" asp-action="CreateRole" method="post">
+    <div>
+        <label> Role Adı Gir</label>
+        <input asp-for="RoleName"/>
+    </div>
+
+    <div>
+        <button> Role Ekle</button>
+    </div>
+</form>

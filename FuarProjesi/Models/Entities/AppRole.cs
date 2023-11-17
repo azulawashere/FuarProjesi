@@ -16,7 +16,8 @@ namespace FuarProjesi.Models.Entities
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public DataStatus Status { get; set; }
+
         //Relational Properties
-        public virtual ICollection<AppUserRole> UserRoles { get; set; }
+        public virtual ICollection<AppUserRole> UserRoles { get; set; } //İsmin UserRoles olmasına dikkat edin
     }
 }
