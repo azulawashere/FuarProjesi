@@ -1,6 +1,7 @@
 ﻿using FuarProjesi.Models.AppRoles;
 using FuarProjesi.Models.AppUsers.RequestModels;
 using FuarProjesi.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
@@ -150,5 +151,11 @@ namespace FuarProjesi.Controllers
             return View(model);
         }
         public IActionResult Member() { return View(); }
+
+        [Authorize("Admin")]
+        public IActionResult AdminPanel()
+        {
+            return View();
+        }
     }
 }
