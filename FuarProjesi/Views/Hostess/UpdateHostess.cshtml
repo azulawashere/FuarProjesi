@@ -1,0 +1,30 @@
+﻿@model HostessSharedPageVM
+
+<h1>Press for <a asp-controller="Hostess" asp-action="GetHostesses">Get Hostesses</a></h1>
+<form asp-controller="Hostess" asp-action="UpdateHostess" method="post" class="form">
+
+
+    <input type="hidden" asp-for="@Model.Hostess.ID" />
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hostess First Name</label>
+        <input asp-for="Hostess.FirstName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hostess Last Name</label>
+        <input asp-for="Hostess.LastName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hostess Age </label>
+        <input asp-for="Hostess.Age" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hostess Languages</label>
+        <input asp-for="Hostess.Languages" class="form-control">
+    </div>
+   
+    <button class="btn btn-primary">
+        Update
+    </button>
+
+</form>
