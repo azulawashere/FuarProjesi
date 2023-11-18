@@ -34,20 +34,20 @@ namespace FuarProjesi.Controllers
                 };
 
                 IdentityResult result= await _userManager.CreateAsync(user,model.Password);
-                if (result.Succeeded)
-                {
-                    #region AdminEklemeIcinTekKullanimlikKodlar
-                    AppRole appRole = await _roleManager.FindByNameAsync("Admin"); //Admin ismindeki rolu bulabilirse Role nesnesini appRole'e atacak bulamazsa appRole null olacak
-                    if (appRole == null) await _roleManager.CreateAsync(new() { Name = "Admin" }); //Admin isminde bir rol yarattık
-                    await _userManager.AddToRoleAsync(user, "Admin"); //appUser degişkeninin tuttuğu kullanıcı nesnesini Admin isimli Role'e ekledik 
+                //if (result.Succeeded)
+                //{
+                //    #region AdminEklemeIcinTekKullanimlikKodlar
+                //    AppRole appRole = await _roleManager.FindByNameAsync("Admin"); //Admin ismindeki rolu bulabilirse Role nesnesini appRole'e atacak bulamazsa appRole null olacak
+                //    if (appRole == null) await _roleManager.CreateAsync(new() { Name = "Admin" }); //Admin isminde bir rol yarattık
+                //    await _userManager.AddToRoleAsync(user, "Admin"); //appUser degişkeninin tuttuğu kullanıcı nesnesini Admin isimli Role'e ekledik 
 
 
-                    #endregion
+                //    #endregion
 
-                   // await _userManager.AddToRoleAsync(user, "Member"); //Register artık bu kod sayesinde direkt Member rolüne sahip olacaktır
+                //   // await _userManager.AddToRoleAsync(user, "Member"); //Register artık bu kod sayesinde direkt Member rolüne sahip olacaktır
 
-                    return RedirectToAction("Index");
-                }
+                //    return RedirectToAction("SignIn");
+                //}
 
                 if (result.Succeeded)
                 {
