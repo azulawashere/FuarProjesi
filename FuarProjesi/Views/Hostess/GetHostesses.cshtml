@@ -1,0 +1,35 @@
+﻿@model HostessResponsePageVM
+
+
+<h1>Press for<a asp-controller="Hostess" asp-action="CreateHostess"> Create new Hostess</a></h1>
+<h1>@TempData["message"]</h1>
+<table class="table tabletable-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Hostess First Name</th>
+            <th>Hostess Last Name</th>
+            <th>Hostess Age</th>
+            <th>Hostess Languages</th>
+
+            <th colspan="2" style="padding-left:200px">Functions</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (HostessResponseModel item in Model.Hostesses)
+        {
+            <tr>
+
+                <td>@item.ID</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Age</td>
+                <td>@item.Languages</td>
+                <td>  <a asp-controller="Hostess" asp-action="UpdateHostess" asp-route-id="@item.ID" class="btn btn-warning">Update</a> </td>
+                <td> <a asp-controller="Hostess" asp-action="DeleteHostess" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>  </td>
+            </tr>
+        }
+    </tbody>
+</table>

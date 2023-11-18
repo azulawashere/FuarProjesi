@@ -1,0 +1,29 @@
+﻿@model HostessRequestPageVM
+<h3>Press for  <a asp-controller="Hostess" asp-action="GetHostesses">Get Hostesses </a></h3>
+<form asp-controller="Hostess" asp-action="CreateHostess" method="post" class="form">
+
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hostess Name</label>
+        <input asp-for="Hostess.FirstName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hostess Last Name</label>
+        <input asp-for="Hostess.LastName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hostess Age</label>
+        <input asp-for="Hostess.Age" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Hostess Languages</label>
+        <input asp-for="Hostess.Languages" class="form-control">
+    </div>
+
+    <button class="btn btn-primary">
+        Add Hostess
+    </button>
+
+
+
+</form>
