@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FuarProjesi.Controllers
 {
-
+    //DESKTOP-ANIL\SQLEXPRESS04
     public class AdminController : Controller
     {
         MyContext _db;

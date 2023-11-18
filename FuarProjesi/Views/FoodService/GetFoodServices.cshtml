@@ -1,0 +1,31 @@
+﻿@model FoodServiceResponsePageVM
+
+
+<h1>Press for<a asp-controller="FoodService" asp-action="CreateFoodService"> Create new Food Service</a></h1>
+<h1>@TempData["message"]</h1>
+<table class="table tabletable-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Food Service Name</th>
+            <th>Food Service Price</th>
+
+            <th colspan="2" style="padding-left:200px">Functions</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (FoodServiceResponseModel item in Model.FoodServices)
+        {
+            <tr>
+
+                <td>@item.ID</td>
+                <td>@item.ServiceName</td>
+                <td>@item.ServicePrice</td>
+                <td>  <a asp-controller="FoodService" asp-action="UpdateFoodService" asp-route-id="@item.ID" class="btn btn-warning">Update</a> </td>
+                <td> <a asp-controller="FoodService" asp-action="DeleteFoodService" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>  </td>
+            </tr>
+        }
+    </tbody>
+</table>
