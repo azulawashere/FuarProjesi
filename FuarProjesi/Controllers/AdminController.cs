@@ -17,7 +17,7 @@ namespace FuarProjesi.Controllers
         {
             _db = db;
         }
-
+        //DESKTOP-A01RV81\\SQLEXPRESS;database=FuarDB
         public IActionResult Index() 
         {
             return View();
