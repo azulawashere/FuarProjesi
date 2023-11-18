@@ -1,0 +1,21 @@
+﻿@model FoodServiceRequestPageVM
+
+<h3>Press for <a asp-controller="Category" asp-action="GetCategories">Get Food Services</a></h3>
+<form asp-controller="FoodService" asp-action="CreateFoodService" method="post" class="form">
+
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Service Name</label>
+        <input asp-for="FoodService.ServiceName" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Service Price</label>
+        <input asp-for="FoodService.ServicePrice" class="form-control">
+    </div>
+
+    <button class="btn btn-primary">
+        Add Food Service
+    </button>
+    
+</form>

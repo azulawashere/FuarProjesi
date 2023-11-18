@@ -1,0 +1,21 @@
+﻿@model FoodServiceSharedPageVM
+
+<h1>Press for <a asp-controller="FoodService" asp-action="GetFoodServices">Get Food Services</a></h1>
+<form asp-controller="FoodService" asp-action="UpdateFoodService" method="post" class="form">
+
+
+    <input type="hidden" asp-for="@Model.FoodService.ID" />
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Food Service Name</label>
+        <input asp-for="FoodService.ServiceName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Food Service Price</label>
+        <input asp-for="FoodService.ServicePrice" class="form-control">
+    </div>
+    <button class="btn btn-primary">
+        Update
+    </button>
+
+</form>
