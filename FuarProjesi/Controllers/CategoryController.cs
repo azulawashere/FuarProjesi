@@ -5,10 +5,12 @@ using FuarProjesi.Models.Categories.ResponseModels;
 using FuarProjesi.Models.ContextClasses;
 using FuarProjesi.Models.Entities;
 using FuarProjesi.Models.MapperClasses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FuarProjesi.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class CategoryController : Controller
     {
         MyContext _db;
@@ -16,8 +18,6 @@ namespace FuarProjesi.Controllers
         {
             _db = db;
         }
-
-
 
         public IActionResult Index()
         {

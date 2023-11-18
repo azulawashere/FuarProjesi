@@ -14,6 +14,6 @@ namespace FuarProjesi.Models.Entities
         public DateTime CreatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public DataStatus Status { get; set; }
-        public DateTime? ModifiedDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime? ModifiedDate { get; set; }
     }
 }
