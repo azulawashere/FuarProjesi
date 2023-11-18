@@ -152,7 +152,7 @@ namespace FuarProjesi.Controllers
         }
         public IActionResult Member() { return View(); }
 
-        [Authorize("Admin")]
+        [Authorize(Roles ="Admin")]
         public IActionResult AdminPanel()
         {
             return View();
