@@ -1,6 +1,6 @@
-﻿using FuarProjesi.Models.Place.PureVms;
+﻿using FuarProjesi.Models.Places.PureVms;
 
-namespace FuarProjesi.Models.Place.PageVms
+namespace FuarProjesi.Models.Places.PageVms
 {
     public class PlaceSharedPageVM
     {

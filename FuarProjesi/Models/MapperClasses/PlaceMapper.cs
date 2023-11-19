@@ -1,8 +1,8 @@
 ﻿using FuarProjesi.Models.Categories.PureVms;
 using FuarProjesi.Models.Categories.ResponseModels;
 using FuarProjesi.Models.Entities;
-using FuarProjesi.Models.Place.PureVms;
-using FuarProjesi.Models.Place.ResponseModels;
+using FuarProjesi.Models.Places.PureVms;
+using FuarProjesi.Models.Places.ResponseModels;
 
 namespace FuarProjesi.Models.MapperClasses
 {

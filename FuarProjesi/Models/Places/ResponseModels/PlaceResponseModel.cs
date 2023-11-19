@@ -1,4 +1,4 @@
-﻿namespace FuarProjesi.Models.Place.ResponseModels
+﻿namespace FuarProjesi.Models.Places.ResponseModels
 {
     public class PlaceResponseModel
     {

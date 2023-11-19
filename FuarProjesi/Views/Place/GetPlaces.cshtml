@@ -1,0 +1,28 @@
+﻿@model PlaceResponsePageVM
+
+<h3>Press for<a asp-controller="Place" asp-action="CreatePlace"> Create new Place</a></h3>
+
+<h1>@TempData["message"]</h1>
+<table class="table tabletable-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Place Name</th>
+            <th>Place Adress</th>
+            <th colspan="2" style="padding-left:200px">Functions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (PlaceResponseModel item in Model.Places)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.PlaceName</td>
+                <td>@item.Adress</td>
+                <td>  <a asp-controller="Place" asp-action="UpdatePlace" asp-route-id="@item.ID" class="btn btn-warning">Update</a> </td>
+                <td> <a asp-controller="Place" asp-action="DeletePlace" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>  </td>
+            </tr>
+        }
+    </tbody>
+</table>

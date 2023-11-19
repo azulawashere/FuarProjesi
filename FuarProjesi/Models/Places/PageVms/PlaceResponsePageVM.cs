@@ -1,6 +1,6 @@
-﻿using FuarProjesi.Models.Place.ResponseModels;
+﻿using FuarProjesi.Models.Places.ResponseModels;
 
-namespace FuarProjesi.Models.Place.PageVms
+namespace FuarProjesi.Models.Places.PageVms
 {
     public class PlaceResponsePageVM
     {

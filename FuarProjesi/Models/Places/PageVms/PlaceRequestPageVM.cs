@@ -1,6 +1,6 @@
-﻿using FuarProjesi.Models.Place.RequestModels;
+﻿using FuarProjesi.Models.Places.RequestModels;
 
-namespace FuarProjesi.Models.Place.PageVms
+namespace FuarProjesi.Models.Places.PageVms
 {
     public class PlaceRequestPageVM
     {

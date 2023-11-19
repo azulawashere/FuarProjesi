@@ -1,4 +1,4 @@
-﻿namespace FuarProjesi.Models.Place.RequestModels
+﻿namespace FuarProjesi.Models.Places.RequestModels
 {
     public class CreatePlaceRequestModel
     {

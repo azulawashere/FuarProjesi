@@ -1,4 +1,4 @@
-﻿namespace FuarProjesi.Models.Place.PureVms
+﻿namespace FuarProjesi.Models.Places.PureVms
 {
     public class PlaceVM
     {
