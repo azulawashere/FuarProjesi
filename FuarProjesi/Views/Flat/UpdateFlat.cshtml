@@ -1,0 +1,33 @@
+﻿@model FlatSharedPageVM
+
+<h1>Press for <a asp-controller="Flat" asp-action="GetFlats">Get Flats </a></h1>
+<form asp-controller="Flat" asp-action="UpdatePlace" method="post" class="form">
+
+
+    <input type="hidden" asp-for="@Model.Flat.ID" />
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat Price</label>
+        <input asp-for="Flat.FlatPrice" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat No</label>
+        <input asp-for="Flat.FlatNo" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat Floor No</label>
+        <input asp-for="Flat.FloorNo" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat MSquare</label>
+        <input asp-for="Flat.MSquare" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat Population</label>
+        <input asp-for="Flat.FlatPopulation" class="form-control">
+    </div>
+
+    <button class="btn btn-primary">
+        Update
+    </button>
+</form>

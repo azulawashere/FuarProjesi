@@ -1,5 +1,4 @@
-﻿using FuarProjesi.Models.Categories.PageVms;
-using FuarProjesi.Models.Categories.PureVms;
+﻿using FuarProjesi.Models.Categories.PureVms;
 using FuarProjesi.Models.Categories.ResponseModels;
 using FuarProjesi.Models.Entities;
 

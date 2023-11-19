@@ -1,0 +1,34 @@
+﻿@model FlatResponsePageVM
+
+<h3>Press for<a asp-controller="Flat" asp-action="CreateFlat"> Create new Flat</a></h3>
+
+<h1>@TempData["message"]</h1>
+<table class="table tabletable-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Flat Price</th>
+            <th>Flat No</th>
+            <th>Floor No</th>
+            <th>Msquare</th>
+            <th>Flat Population</th>
+            <th colspan="2" style="padding-left:200px">Functions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (FlatResponseModel item in Model.Flats)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.FlatPrice</td>
+                <td>@item.FlatNo</td>
+                <td>@item.FloorNo</td>
+                <td>@item.MSquare</td>
+                <td>@item.FlatPopulation</td>
+                <td>  <a asp-controller="Flat" asp-action="UpdateFlat" asp-route-id="@item.ID" class="btn btn-warning">Update</a> </td>
+                <td> <a asp-controller="Flat" asp-action="DeleteFlat" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>  </td>
+            </tr>
+        }
+    </tbody>
+</table>

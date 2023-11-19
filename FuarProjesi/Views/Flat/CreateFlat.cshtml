@@ -1,0 +1,31 @@
+﻿@model FlatRequestPageVM
+
+<h3>Press for <a asp-controller="Flat" asp-action="GetFlats">Get Flats</a></h3>
+<form asp-controller="Flat" asp-action="CreateFlat" method="post" class="form">
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat Price</label>
+        <input asp-for="Flat.FlatPrice" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat No</label>
+        <input asp-for="Flat.FlatNo" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat Floor No</label>
+        <input asp-for="Flat.FloorNo" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat MSquare</label>
+        <input asp-for="Flat.MSquare" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Flat Population</label>
+        <input asp-for="Flat.FlatPopulation" class="form-control">
+    </div>
+
+    <button class="btn btn-primary">
+        Add Flat
+    </button>
+
+</form>

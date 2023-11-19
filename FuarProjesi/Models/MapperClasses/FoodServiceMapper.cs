@@ -1,6 +1,4 @@
-﻿using FuarProjesi.Models.Categories.PureVms;
-using FuarProjesi.Models.Categories.ResponseModels;
-using FuarProjesi.Models.Entities;
+﻿using FuarProjesi.Models.Entities;
 using FuarProjesi.Models.FoodServices.PureVms;
 using FuarProjesi.Models.FoodServices.ResponseModels;
 

@@ -1,6 +1,4 @@
-﻿
-using FuarProjesi.Models.Categories.RequestModels;
-using FuarProjesi.Models.ContextClasses;
+﻿using FuarProjesi.Models.ContextClasses;
 using FuarProjesi.Models.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

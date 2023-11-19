@@ -1,7 +1,4 @@
-﻿using FuarProjesi.Models.Categories.PageVms;
-using FuarProjesi.Models.Categories.PureVms;
-using FuarProjesi.Models.Categories.ResponseModels;
-using FuarProjesi.Models.ContextClasses;
+﻿using FuarProjesi.Models.ContextClasses;
 using FuarProjesi.Models.Entities;
 using FuarProjesi.Models.FoodServices.PageVms;
 using FuarProjesi.Models.FoodServices.PureVms;
