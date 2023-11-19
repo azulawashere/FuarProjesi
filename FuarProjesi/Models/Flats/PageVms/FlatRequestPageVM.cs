@@ -5,6 +5,7 @@ namespace FuarProjesi.Models.Flats.PageVms
     public class FlatRequestPageVM
     {
         public CreateFlatRequestModel Flat { get; set; }
+        public int PlaceID { get; set; }
 
     }
 }

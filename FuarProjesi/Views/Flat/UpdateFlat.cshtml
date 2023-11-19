@@ -1,10 +1,11 @@
 ﻿@model FlatSharedPageVM
 
 <h1>Press for <a asp-controller="Flat" asp-action="GetFlats">Get Flats </a></h1>
-<form asp-controller="Flat" asp-action="UpdatePlace" method="post" class="form">
+<form asp-controller="Flat" asp-action="UpdateFlat" method="post" class="form">
 
 
     <input type="hidden" asp-for="@Model.Flat.ID" />
+    <input type="hidden" asp-for="@Model.PlaceID"/>
 
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Flat Price</label>

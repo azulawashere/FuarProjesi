@@ -6,6 +6,7 @@ namespace FuarProjesi.Models.Flats.PageVms
     {
         public List<FlatResponseModel> Flats { get; set; }
         public FlatResponseModel Flat { get; set; }
+        public int PlaceID { get; set; }
 
     }
 }

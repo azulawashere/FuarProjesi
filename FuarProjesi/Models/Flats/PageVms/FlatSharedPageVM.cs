@@ -5,5 +5,6 @@ namespace FuarProjesi.Models.Flats.PageVms
     public class FlatSharedPageVM
     {
         public FlatVM Flat { get; set; }
+        public int PlaceID { get; set; }
     }
 }

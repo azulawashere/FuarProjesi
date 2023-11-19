@@ -22,30 +22,39 @@ namespace FuarProjesi.Controllers
         {
             return View();
         }
-        public IActionResult CreateFlat()
+        public IActionResult CreateFlat(int id)
         {
-            return View();
+            FlatRequestPageVM model = new()
+            {
+                PlaceID=id,
+            };
+            return View(model);
         }
 
         [HttpPost]
-        public IActionResult CreateFlat(CreateFlatRequestModel flat)
+        public IActionResult CreateFlat(FlatRequestPageVM model)
         {
             Flat f = new()
             {
-                PlaceID = flat.PlaceID,
-                FlatPrice = flat.FlatPrice,
-                FlatNo = flat.FlatNo,
-                FloorNo = flat.FloorNo,
-                MSquare = flat.MSquare,
-                FlatPopulation = flat.FlatPopulation
+                PlaceID = model.PlaceID,
+                FlatPrice = model.Flat.FlatPrice,
+                FlatNo = model.Flat.FlatNo,
+                FloorNo = model.Flat.FloorNo,
+                MSquare = model.Flat.MSquare,
+                FlatPopulation = model.Flat.FlatPopulation
             };
             _db.Flats.Add(f);
             _db.SaveChanges();
-            return RedirectToAction("GetFlats");
+            TempData["id"]=model.PlaceID;
+            return RedirectToAction("GetFlats",model);
         }
-        public IActionResult GetFlats() 
+        public IActionResult GetFlats(int id) 
         {
-            List<FlatResponseModel> flats = _db.Flats.Select(x => new FlatResponseModel 
+            if (id==0)
+            {
+                id = Convert.ToInt32( TempData["id"]);
+            }
+            List<FlatResponseModel> flats = _db.Flats.Where(x=>x.PlaceID==id).Select(x => new FlatResponseModel 
             {
                 ID = x.ID,
                 FlatPrice = x.FlatPrice,
@@ -57,7 +66,8 @@ namespace FuarProjesi.Controllers
 
             FlatResponsePageVM fRpgvm = new FlatResponsePageVM
             {
-                Flats = flats
+                Flats = flats,
+                PlaceID = id,
             };
             return View(fRpgvm);
         }
@@ -73,22 +83,26 @@ namespace FuarProjesi.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateFlat(FlatVM flat)
+        public IActionResult UpdateFlat(FlatSharedPageVM model)
         {
-            Flat original = _db.Flats.Find(flat.ID);
-            original.FlatPrice = flat.FlatPrice;
-            original.FlatNo = flat.FlatNo;
-            original.FloorNo = flat.FloorNo;
-            original.MSquare = flat.MSquare;
-            original.FlatPopulation = flat.FlatPopulation;
+            Flat original = _db.Flats.Find(model.Flat.ID);
+            original.FlatPrice = model.Flat.FlatPrice;
+            original.FlatNo = model.Flat.FlatNo;
+            original.FloorNo = model.Flat.FloorNo;
+            original.MSquare = model.Flat.MSquare;
+            original.FlatPopulation = model.Flat.FlatPopulation;
             _db.SaveChanges();
             TempData["message"] = "update successful";
+            TempData["id"] = original.PlaceID;
             return RedirectToAction("GetFlats");
         }
 
         public IActionResult DeleteFlat(int id)
         {
-            _db.Flats.Remove(_db.Flats.Find(id));
+            Flat f = _db.Flats.Find(id);
+            TempData["id"] =f.PlaceID;
+            _db.Flats.Remove(f);
+
             _db.SaveChanges();
             return RedirectToAction("GetFlats");
         }

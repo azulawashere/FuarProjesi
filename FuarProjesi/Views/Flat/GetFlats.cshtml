@@ -1,6 +1,6 @@
 ﻿@model FlatResponsePageVM
 
-<h3>Press for<a asp-controller="Flat" asp-action="CreateFlat"> Create new Flat</a></h3>
+<h3>Press for<a asp-controller="Flat" asp-action="CreateFlat" asp-route-id="@Model.PlaceID"> Create new Flat</a></h3>
 
 <h1>@TempData["message"]</h1>
 <table class="table tabletable-hover">
