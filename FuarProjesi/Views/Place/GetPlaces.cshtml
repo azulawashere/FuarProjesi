@@ -9,7 +9,7 @@
             <th>ID</th>
             <th>Place Name</th>
             <th>Place Adress</th>
-            <th colspan="2" style="padding-left:200px">Functions</th>
+            <th colspan="3" style="padding-left:200px">Functions</th>
         </tr>
     </thead>
 
@@ -20,6 +20,7 @@
                 <td>@item.ID</td>
                 <td>@item.PlaceName</td>
                 <td>@item.Adress</td>
+                <td>  <a asp-controller="Flat" asp-action="CreateFlat" asp-route-id="@item.ID" class="btn btn-warning">Add Flat</a> </td>
                 <td>  <a asp-controller="Place" asp-action="UpdatePlace" asp-route-id="@item.ID" class="btn btn-warning">Update</a> </td>
                 <td> <a asp-controller="Place" asp-action="DeletePlace" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>  </td>
             </tr>

@@ -7,5 +7,6 @@
         public string FloorNo { get; set; }
         public int MSquare { get; set; }
         public int FlatPopulation { get; set; }
+        public int  PlaceID { get; set; }
     }
 }

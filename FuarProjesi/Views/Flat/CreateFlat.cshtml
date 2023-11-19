@@ -1,8 +1,9 @@
 ﻿@model FlatRequestPageVM
 
 <h3>Press for <a asp-controller="Flat" asp-action="GetFlats">Get Flats</a></h3>
-<form asp-controller="Flat" asp-action="CreateFlat" method="post" class="form">
+<form  asp-controller="Flat" asp-action="CreateFlat" method="post" class="form">
 
+    <input type="hidden" asp-for="Flat.PlaceID" />
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Flat Price</label>
         <input asp-for="Flat.FlatPrice" class="form-control">

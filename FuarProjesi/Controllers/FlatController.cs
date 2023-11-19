@@ -32,6 +32,7 @@ namespace FuarProjesi.Controllers
         {
             Flat f = new()
             {
+                PlaceID = flat.PlaceID,
                 FlatPrice = flat.FlatPrice,
                 FlatNo = flat.FlatNo,
                 FloorNo = flat.FloorNo,
